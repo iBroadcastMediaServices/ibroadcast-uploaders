@@ -94,7 +94,7 @@ class Uploader(object):
                     print(buffer.getvalue())
 
                     # Visit URL
-                    print(f'To authorize, scan the QR code or enter code {device_code['user_code']} at: {device_code['verification_uri']}')
+                    print(f"To authorize, scan the QR code or enter code {device_code['user_code']} at: {device_code['verification_uri']}")
 
                     print('\nWaiting for authorization...')
                 except Exception as e:
@@ -255,7 +255,7 @@ class Uploader(object):
         response = requests.post(
             "https://api.ibroadcast.com/s/JSON/",
             data=post_data,
-            headers={'Content-Type': 'application/json', 'User-Agent': self.USER_AGENT, 'Authorization': f'{self.token['token_type']} {self.token['access_token']}'}
+            headers={'Content-Type': 'application/json', 'User-Agent': self.USER_AGENT, 'Authorization': f"{self.token['token_type']} {self.token['access_token']}"}
         )
 
         if not response.ok:
@@ -336,7 +336,7 @@ class Uploader(object):
         # Send our request.
         response = requests.post(
             "https://upload.ibroadcast.com",
-            headers={'Authorization': f'{self.token['token_type']} {self.token['access_token']}'}
+            headers={'Authorization': f"{self.token['token_type']} {self.token['access_token']}"}
         )
 
         if not response.ok:
@@ -389,7 +389,7 @@ class Uploader(object):
                 "https://upload.ibroadcast.com",
                 post_data,
                 files=file_data,
-                headers={'Authorization': f'{self.token['token_type']} {self.token['access_token']}'}
+                headers={'Authorization': f"{self.token['token_type']} {self.token['access_token']}"}
             )
 
             ## refresh and retry one time
@@ -399,7 +399,7 @@ class Uploader(object):
                     "https://upload.ibroadcast.com",
                     post_data,
                     files=file_data,
-                    headers={'Authorization': f'{self.token['token_type']} {self.token['access_token']}'}
+                    headers={'Authorization': f"{self.token['token_type']} {self.token['access_token']}"}
                 )
 
             upload_file.close()
