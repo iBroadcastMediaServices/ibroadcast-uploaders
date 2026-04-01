@@ -67,8 +67,8 @@ namespace ibroadcast_uploader
 
     public class ibroadcast_uploader
     {
-        private static readonly String SYNC_ENDPOINT = "https://upload-dev.ibroadcast.com";
-	    private static readonly String API_ENDPOINT = "https://api-dev.ibroadcast.com/";
+        private static readonly String SYNC_ENDPOINT = "https://upload.ibroadcast.com";
+	    private static readonly String API_ENDPOINT = "https://api.ibroadcast.com/";
         private static readonly String CLIENT_ID = "de4ce836a9fb11f0bc7fb49691aa2236";
 	    private static readonly String USER_AGENT = "C# upload client 1.2";
 	    private static readonly String JSON_CONTENT_TYPE = "application/json";
